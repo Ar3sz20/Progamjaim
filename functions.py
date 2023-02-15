@@ -1,5 +1,6 @@
+print("válasz feladatot: 1,2,3,4,5")
 
-if input(1):
+if input()==1:
  def my_function():
     a = open("input.txt","r")
     data = a.read()
@@ -9,7 +10,7 @@ if input(1):
  my_function()
  print()
 
-elif input(2):
+elif input()==2:
  def my_function2(input, mode):
 
     a = open(input, mode)
@@ -21,7 +22,7 @@ elif input(2):
  my_function2("input.txt","r")
  print()
 
-elif input(3):
+elif input()==3:
  def my_function3(input, mode):
     with open(input,mode) as input_file:
         Line = input_file.read() .split(",")
@@ -31,7 +32,7 @@ elif input(3):
  my_function3("input.txt","r")
  print()
 
-elif input(4):
+elif input()==4:
  import math
  def elsofokumegoldokeplet(m,b):
     if m == 0:
@@ -44,7 +45,8 @@ elif input(4):
  elsofokumegoldokeplet(-4,3)
  elsofokumegoldokeplet(4,1)
  print()
-elif input(5):
+
+elif input()==5:
  def masodfokumegoldokeplet(a,b,c):
      if b**2 -4 * a * c < 0:
         return "sfge"
