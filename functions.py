@@ -1,4 +1,5 @@
-print("válasz feladatot: 1,2,3,4,5")
+
+int(input(("válasz feladatot: 1,2,3,4,5")))
 
 if input()==1:
  def my_function():
