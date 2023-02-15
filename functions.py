@@ -1,7 +1,7 @@
 
-int(input(("válasz feladatot: 1,2,3,4,5")))
+feladat = int(input(("válasz feladatot: ")))
 
-if input()==1:
+if feladat ==1:
  def my_function():
     a = open("input.txt","r")
     data = a.read()
@@ -11,7 +11,7 @@ if input()==1:
  my_function()
  print()
 
-elif input()==2:
+elif feladat==2:
  def my_function2(input, mode):
 
     a = open(input, mode)
@@ -23,7 +23,7 @@ elif input()==2:
  my_function2("input.txt","r")
  print()
 
-elif input()==3:
+elif feladat==3:
  def my_function3(input, mode):
     with open(input,mode) as input_file:
         Line = input_file.read() .split(",")
@@ -33,7 +33,7 @@ elif input()==3:
  my_function3("input.txt","r")
  print()
 
-elif input()==4:
+elif feladat==4:
  import math
  def elsofokumegoldokeplet(m,b):
     if m == 0:
@@ -47,15 +47,21 @@ elif input()==4:
  elsofokumegoldokeplet(4,1)
  print()
 
-elif input()==5:
+elif feladat==5:
  def masodfokumegoldokeplet(a,b,c):
-     if b**2 -4 * a * c < 0:
-        return "sfge"
+     if a == 0:
+       print("a nem lehett nulla")
      else:
-        x1 = (-b + math.sqrt(b**2 -4* a * c)) / (2*a)
-        x2 = (-b - math.sqrt(b**2 -4* a * c)) / (2*a)
-        return x1,x2
+      print("A megadott másodfokú egyenlet: f(x)=",a,"*X2",b,"x","+",c)
+      D = (b*b)-(4*a*c)
+     if D < 0:
+      x1 = -b + math.sqrt(D)/(2*a) 
+      x2 = -b - math.sqrt(D)/(2*a) 
+      print ("Az egyik gyök: x1=", x1)
+      print ("A másik gyök: x2=", x2)
  masodfokumegoldokeplet(2,5,9)
+ masodfokumegoldokeplet(3,9,4)
+ masodfokumegoldokeplet(5,7,2)
  print()
 
 else:
